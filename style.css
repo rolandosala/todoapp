@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: lightgray;
+}
+.card{
+    width: 100%;
+    padding: 20px;
+}
+.card .card-header{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+.card .card-header .input-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.card .card-header .input-container input{
+    width: 80%;
+    height: 30px;
+    padding: 20px;
+    outline: none;
+    border: none;
+    background-color: lightgray;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button{
+    width: 15%;
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    outline: none;
+    background-color: blue;
+    color: white;
+    border: none;
+
+}
+.card-body{
+    margin-top: 40px;
+}
+ul li{
+    position: relative;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    background-color: white;
+    padding: 20px 40px;
+    margin-top: 10px;
+}
+.delete, .update{
+    position: absolute;
+    right: 5%;
+}
+.update{
+    margin-right: 2em;
+}
+.delete:hover{
+    color: red;
+    cursor: pointer;
+}
+.update:hover{
+    color: limegreen;
+    cursor: pointer;
+}
+.checked{
+    position: relative;
+    background-color: blue;
+    color: white;
+    text-decoration: line-through 1px solid red;
+}
+.checked::before{
+    content: '';
+    position: absolute;
+    border-color: white;
+    border-style: solid;
+    border-width: 0 3px 3px 0;
+    top: 15px;
+    left: 16px;
+    height: 15px;
+    width: 7px;
+    transform: rotate(45deg);
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    background-color: blue;
+    width: 100%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+}
+
+@media only screen and (min-width: 992px){
+    .card{
+        width: 40%;
+    }
+}
